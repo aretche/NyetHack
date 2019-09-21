@@ -3,10 +3,20 @@ fun main() {
     var healthPoints = 89
     val isBlessed = true
     val isImmortal = false
+    val karma = (Math.pow(Math.random(), (110 - healthPoints) / 100.0) * 20 ).toInt()
 
     //Aura
     val auraVisible = isBlessed && healthPoints > 50 || isImmortal
-    val auraColor = if (auraVisible) "GREEN" else "NONE"
+    val auraColor = if (auraVisible) {
+        when (karma){
+            in 0..5 -> "RED"
+            in 6..10 -> "ORANGE"
+            in 11..15 -> "PURPLE"
+            else -> "GREEN"
+        }
+    } else {
+        "NONE"
+    }
 
     val healthStatus = when (healthPoints) {
         100 -> "is in excellent condition!"
