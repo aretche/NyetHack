@@ -1,9 +1,11 @@
+import kotlin.math.pow
+
 fun main() {
     val name = "Madrigal"
-    var healthPoints = 89
+    val healthPoints = 89
     val isBlessed = true
     val isImmortal = false
-    val karma = (Math.pow(Math.random(), (110 - healthPoints) / 100.0) * 20 ).toInt()
+    val karma = (Math.random().pow((110 - healthPoints) / 100.0) * 20 ).toInt()
 
     //Aura
     val auraVisible = isBlessed && healthPoints > 50 || isImmortal
