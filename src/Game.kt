@@ -20,8 +20,7 @@ private fun printPlayerStatus(auraColor: String, isBlessed: Boolean, name: Strin
 }
 
 private fun auraColor(isBlessed: Boolean, healthPoints: Int, isImmortal: Boolean): String {
-    val auraVisible = isBlessed && healthPoints > 50 || isImmortal
-    return if (auraVisible) "GREEN" else "NONE"
+    return if (isBlessed && healthPoints > 50 || isImmortal) "GREEN" else "NONE"
 }
 
 private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
