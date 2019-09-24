@@ -38,6 +38,6 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
     }
 }
 
-private fun castFireball() {
-    println("A glass of Fireball springs into existence.")
+private fun castFireball(numFireballs: Int = 2) {
+    println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
